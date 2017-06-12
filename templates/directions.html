@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <title>On The Way</title>
+    </head>
+    <body>
+        <div id="title">
+            <h1>On The Way: Where to Stop On a Long Trip</h1>
+        </div>
+        <div class="container">
+            <p><a href="https://www.google.com/maps/dir/{{orig_var}}/{{new_places[0]['address']}}/{{dest_var}}">
+            <b>Possible stop 1, {{new_places[0]['name']}} at {{new_places[0]['address']}}:</b>
+            </a></p>
+            <p>{{new_places[0]['tt3']}} min. total travel time.</p>
+            <p>{{new_places[0]['tt1']}} min. travel time from origin to {{new_places[0]['name']}}.</p>
+            <p>{{new_places[0]['tt2']}} min. travel time from {{new_places[0]['name']}} to destination.</p>
+            <div id="map1" style="position:relative; top: 0px; right: 0px;">
+                <iframe width="500" height="500" frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed/v1/directions?key={{api_key}}&origin={{orig_var}}&destination={{dest_var}}&waypoints=place_id:{{new_places[0]['place_id']}}"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <br>
+            <p><a href="https://www.google.com/maps/dir/{{orig_var}}/{{new_places[1]['address']}}/{{dest_var}}">
+            <b>Possible stop 2, {{new_places[1]['name']}} at {{new_places[1]['address']}}:</b>
+            </a></p>
+            <p>{{new_places[1]['tt3']}} min. total travel time.</p>
+            <p>{{new_places[1]['tt1']}} min. travel time from origin to {{new_places[1]['name']}}.</p>
+            <p>{{new_places[1]['tt2']}} min. travel time from {{new_places[1]['name']}} to destination.</p>
+            <div id="map2" style="position:relative; top: 0px; right: 0px;">
+                <iframe width="500" height="500" frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed/v1/directions?key={{api_key}}&origin={{orig_var}}&destination={{dest_var}}&waypoints=place_id:{{new_places[1]['place_id']}}"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <br>
+            <p><a href="https://www.google.com/maps/dir/{{orig_var}}/{{new_places[2]['address']}}/{{dest_var}}">
+            <b>Possible stop 3, {{new_places[2]['name']}} at {{new_places[2]['address']}}:</b>
+            </a></p>
+            <p>{{new_places[2]['tt3']}} min. total travel time.</p>
+            <p>{{new_places[2]['tt1']}} min. travel time from origin to {{new_places[2]['name']}}.</p>
+            <p>{{new_places[2]['tt2']}} min. travel time from {{new_places[2]['name']}} to destination.</p>
+            <div id="map2" style="position:relative; top: 0px; right: 0px;">
+                <iframe width="500" height="500" frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed/v1/directions?key={{api_key}}&origin={{orig_var}}&destination={{dest_var}}&waypoints=place_id:{{new_places[2]['place_id']}}"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <br>
+            <p><a href="https://www.google.com/maps/dir/{{orig_var}}/{{new_places[3]['address']}}/{{dest_var}}">
+            <b>Possible stop 4, {{new_places[3]['name']}} at {{new_places[3]['address']}}:</b>
+            </a></p>
+            <p>{{new_places[3]['tt3']}} min. total travel time.</p>
+            <p>{{new_places[3]['tt1']}} min. travel time from origin to {{new_places[3]['name']}}.</p>
+            <p>{{new_places[3]['tt2']}} min. travel time from {{new_places[3]['name']}} to destination.</p>
+            <div id="map2" style="position:relative; top: 0px; right: 0px;">
+                <iframe width="500" height="500" frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed/v1/directions?key={{api_key}}&origin={{orig_var}}&destination={{dest_var}}&waypoints=place_id:{{new_places[3]['place_id']}}"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <div id="footer-background">
+        </div>
+        <div class="copyright">
+           &#169; 2017 <a target = "_blank" href="https://github.com/polar2">Kenneth Kuhn</a>
+        </div>
+    </footer>
+</html>

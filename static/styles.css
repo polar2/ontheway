@@ -1,0 +1,49 @@
+body {
+	background-image:url('congruent_pentagon.png');
+}
+
+.container {
+	background:rgba(255, 255, 255, 0.55);
+    border-radius:10px;
+    padding-bottom:10px;
+    margin-bottom:40px;
+}
+
+footer {
+	position:fixed;
+	background:rgba(255, 255, 255, 0.48);
+    bottom:0px;
+    left:0px;
+    width:100%;
+    border-top:1px solid #d3d3d3;
+}
+
+footer .copyright {
+    text-align: right;
+    padding-right:10px;
+    padding-top:8px;
+    font-size:13px;
+    margin-bottom:-3px;
+}
+
+.section {
+    border-bottom:1px solid #d3d3d3;
+    padding-bottom:10px;
+}
+
+.description {
+	opacity:.5;
+}
+
+h1 {
+    text-align: center;
+    color: #807B7B;
+}
+
+h4 {
+	margin-bottom:0px;
+}
+
+h3 {
+	opacity:.8;
+}

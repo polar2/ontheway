@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <title>On The Way</title>
+    </head>
+    <body>
+        <div id="title">
+            <h1>On The Way: Where to Stop On a Long Trip</h1>
+        </div>
+        <div class="container">
+            <h3><font color="red">Error: {{error_str}}</font></h3>
+        </div>
+    </body>
+    <footer>
+        <div id="footer-background">
+        </div>
+        <div class="copyright">
+           &#169; 2017 <a target = "_blank" href="https://github.com/polar2">Kenneth Kuhn</a>
+        </div>
+    </footer>
+</html>
